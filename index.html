@@ -1,269 +1,377 @@
-<div class="app">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
 
-  <header class="navbar">
-    <div class="logo">♻️ W2V</div>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-    <button class="login-btn" onclick="openLogin()">
-      Login
-    </button>
-  </header>
+  <meta name="description"
+        content="EcoTrade - Turn waste into value.">
 
-  <main>
+  <title>EcoTrade ♻️</title>
 
-    <!-- HERO -->
-    <section class="hero">
+  <!-- CONNECT CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
 
-      <div class="badge">
-        🌍 TURN WASTE INTO VALUE
+<body>
+
+  <div class="app">
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+
+      <div class="logo">
+        ♻️ EcoTrade
       </div>
 
-      <h1>
-        Don't Throw It Away.
-        <span>Turn It Into Value.</span>
-      </h1>
+      <button
+        class="login-btn"
+        onclick="openLogin()">
+        Login
+      </button>
+
+    </header>
+
+
+    <main>
+
+      <!-- HERO SECTION -->
+      <section class="hero">
+
+        <div class="badge">
+          🌍 TURN WASTE INTO VALUE
+        </div>
+
+        <h1>
+          Don't Throw It Away.
+          <span>Turn It Into Value.</span>
+        </h1>
+
+        <p>
+          EcoTrade connects people who have recyclable
+          materials with people and businesses that need them.
+        </p>
+
+        <div class="hero-buttons">
+
+          <button
+            class="primary-btn"
+            onclick="openRegister()">
+            Start Free Trial
+          </button>
+
+          <button
+            class="secondary-btn"
+            onclick="openMarketplace()">
+            Explore Marketplace
+          </button>
+
+        </div>
+
+        <p class="trial-text">
+          🎁 3 days FREE — then ₦10,000 membership
+        </p>
+
+      </section>
+
+
+      <!-- IMPACT -->
+      <section class="impact">
+
+        <div class="impact-card">
+          <strong>0 kg</strong>
+          <small>Waste Recovered</small>
+        </div>
+
+        <div class="impact-card">
+          <strong>0</strong>
+          <small>Members</small>
+        </div>
+
+        <div class="impact-card">
+          <strong>0</strong>
+          <small>Listings</small>
+        </div>
+
+      </section>
+
+
+      <!-- HOW IT WORKS -->
+      <section class="how">
+
+        <h2>How EcoTrade Works</h2>
+
+        <div class="steps">
+
+          <div class="step">
+
+            <div class="step-icon">
+              👤
+            </div>
+
+            <h3>
+              1. Register
+            </h3>
+
+            <p>
+              Create your account and enjoy
+              3 days of free access.
+            </p>
+
+          </div>
+
+
+          <div class="step">
+
+            <div class="step-icon">
+              ♻️
+            </div>
+
+            <h3>
+              2. Post Materials
+            </h3>
+
+            <p>
+              List recyclable materials that
+              you want to sell or give away.
+            </p>
+
+          </div>
+
+
+          <div class="step">
+
+            <div class="step-icon">
+              🤝
+            </div>
+
+            <h3>
+              3. Connect
+            </h3>
+
+            <p>
+              Interested buyers contact the seller
+              and arrange collection.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- CATEGORIES -->
+      <section class="categories">
+
+        <h2>
+          What Can You Trade?
+        </h2>
+
+        <div class="category-grid">
+
+          <div class="category">
+            🧴
+            <span>Plastic</span>
+          </div>
+
+          <div class="category">
+            📦
+            <span>Paper</span>
+          </div>
+
+          <div class="category">
+            🔩
+            <span>Metal</span>
+          </div>
+
+          <div class="category">
+            🍾
+            <span>Glass</span>
+          </div>
+
+          <div class="category">
+            🍌
+            <span>Organic</span>
+          </div>
+
+          <div class="category">
+            📱
+            <span>E-Waste</span>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- REGISTER MODAL -->
+      <div
+        id="registerModal"
+        class="modal">
+
+        <div class="modal-box">
+
+          <button
+            class="close"
+            onclick="closeRegister()">
+            ×
+          </button>
+
+          <h2>
+            Create Your Account
+          </h2>
+
+          <p class="modal-subtitle">
+            Start your 3-day free membership.
+          </p>
+
+          <input
+            type="text"
+            id="registerName"
+            placeholder="Full Name">
+
+          <input
+            type="email"
+            id="registerEmail"
+            placeholder="Email Address">
+
+          <input
+            type="tel"
+            id="registerPhone"
+            placeholder="Phone Number">
+
+          <input
+            type="password"
+            id="registerPassword"
+            placeholder="Create Password">
+
+          <input
+            type="text"
+            id="registerLocation"
+            placeholder="Your Location">
+
+          <button
+            class="primary-btn full"
+            onclick="registerUser()">
+
+            Create Account
+
+          </button>
+
+          <p class="terms">
+            By registering, you agree to the
+            EcoTrade terms and conditions.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- LOGIN MODAL -->
+      <div
+        id="loginModal"
+        class="modal">
+
+        <div class="modal-box">
+
+          <button
+            class="close"
+            onclick="closeLogin()">
+            ×
+          </button>
+
+          <h2>
+            Welcome Back
+          </h2>
+
+          <input
+            type="email"
+            id="loginEmail"
+            placeholder="Email Address">
+
+          <input
+            type="password"
+            id="loginPassword"
+            placeholder="Password">
+
+          <button
+            class="primary-btn full"
+            onclick="loginUser()">
+
+            Login
+
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- USER DASHBOARD -->
+      <section
+        id="dashboard"
+        class="dashboard hidden">
+
+        <h2>
+          Welcome to EcoTrade 👋
+        </h2>
+
+        <div class="trial-card">
+
+          <p>
+            Membership Status
+          </p>
+
+          <h3 id="membershipStatus">
+            3-Day Free Trial
+          </h3>
+
+          <p id="trialMessage">
+            Your free trial is active.
+          </p>
+
+          <button
+            class="primary-btn"
+            onclick="openMarketplace()">
+
+            Continue to Marketplace
+
+          </button>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+      <h3>
+        ♻️ EcoTrade
+      </h3>
 
       <p>
-        Waste-to-Value connects people who have recyclable
-        materials with people and businesses that need them.
+        Waste is not useless.
+        It is misplaced value.
       </p>
 
-      <div class="hero-buttons">
+      <small>
+        © 2026 EcoTrade
+      </small>
 
-        <button class="primary-btn" onclick="openRegister()">
-          Start Free Trial
-        </button>
+    </footer>
 
-        <button class="secondary-btn" onclick="openMarketplace()">
-          Explore Marketplace
-        </button>
+  </div>
 
-      </div>
 
-      <p class="trial-text">
-        🎁 3 days FREE — then ₦10,000 membership
-      </p>
+  <!-- CONNECT JAVASCRIPT -->
+  <script src="script.js"></script>
 
-    </section>
-
-
-    <!-- IMPACT -->
-    <section class="impact">
-
-      <div class="impact-card">
-        <strong>0 kg</strong>
-        <small>Waste Recovered</small>
-      </div>
-
-      <div class="impact-card">
-        <strong>0</strong>
-        <small>Members</small>
-      </div>
-
-      <div class="impact-card">
-        <strong>0</strong>
-        <small>Listings</small>
-      </div>
-
-    </section>
-
-
-    <!-- HOW IT WORKS -->
-    <section class="how">
-
-      <h2>How Waste-to-Value Works</h2>
-
-      <div class="steps">
-
-        <div class="step">
-          <div class="step-icon">👤</div>
-          <h3>1. Register</h3>
-          <p>
-            Create your account and enjoy
-            3 days of free access.
-          </p>
-        </div>
-
-        <div class="step">
-          <div class="step-icon">♻️</div>
-          <h3>2. Post Waste</h3>
-          <p>
-            List recyclable materials you
-            want to sell or give away.
-          </p>
-        </div>
-
-        <div class="step">
-          <div class="step-icon">🤝</div>
-          <h3>3. Connect</h3>
-          <p>
-            Interested buyers contact the
-            seller and arrange collection.
-          </p>
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- CATEGORIES -->
-    <section class="categories">
-
-      <h2>What Can You Sell?</h2>
-
-      <div class="category-grid">
-
-        <div class="category">🧴<span>Plastic</span></div>
-
-        <div class="category">📦<span>Paper</span></div>
-
-        <div class="category">🔩<span>Metal</span></div>
-
-        <div class="category">🍾<span>Glass</span></div>
-
-        <div class="category">🍌<span>Organic</span></div>
-
-        <div class="category">📱<span>E-Waste</span></div>
-
-      </div>
-
-    </section>
-
-
-    <!-- REGISTER MODAL -->
-    <div id="registerModal" class="modal">
-
-      <div class="modal-box">
-
-        <button class="close" onclick="closeRegister()">×</button>
-
-        <h2>Create Your Account</h2>
-
-        <p class="modal-subtitle">
-          Start your 3-day free membership.
-        </p>
-
-        <input
-          type="text"
-          id="registerName"
-          placeholder="Full Name"
-        >
-
-        <input
-          type="email"
-          id="registerEmail"
-          placeholder="Email Address"
-        >
-
-        <input
-          type="tel"
-          id="registerPhone"
-          placeholder="Phone Number"
-        >
-
-        <input
-          type="password"
-          id="registerPassword"
-          placeholder="Create Password"
-        >
-
-        <input
-          type="text"
-          id="registerLocation"
-          placeholder="Your Location"
-        >
-
-        <button
-          class="primary-btn full"
-          onclick="registerUser()"
-        >
-          Create Account
-        </button>
-
-        <p class="terms">
-          By registering, you agree to the
-          Waste-to-Value terms and conditions.
-        </p>
-
-      </div>
-
-    </div>
-
-
-    <!-- LOGIN MODAL -->
-    <div id="loginModal" class="modal">
-
-      <div class="modal-box">
-
-        <button class="close" onclick="closeLogin()">×</button>
-
-        <h2>Welcome Back</h2>
-
-        <input
-          type="email"
-          id="loginEmail"
-          placeholder="Email Address"
-        >
-
-        <input
-          type="password"
-          id="loginPassword"
-          placeholder="Password"
-        >
-
-        <button
-          class="primary-btn full"
-          onclick="loginUser()"
-        >
-          Login
-        </button>
-
-      </div>
-
-    </div>
-
-
-    <!-- DASHBOARD -->
-    <section id="dashboard" class="dashboard hidden">
-
-      <h2>Welcome to Waste-to-Value 👋</h2>
-
-      <div class="trial-card">
-
-        <p>Membership Status</p>
-
-        <h3 id="membershipStatus">
-          3-Day Free Trial
-        </h3>
-
-        <p id="trialMessage">
-          Your free trial is active.
-        </p>
-
-        <button class="primary-btn">
-          Continue to Marketplace
-        </button>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <footer>
-
-    <h3>♻️ Waste-to-Value</h3>
-
-    <p>
-      Waste is not useless.
-      It is misplaced value.
-    </p>
-
-    <small>
-      © 2026 Waste-to-Value
-    </small>
-
-  </footer>
-
-</div>
+</body>
+</html>
